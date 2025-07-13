@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "sg-drops",
+	"version": "${version}",
+	"name": "SG Drops",
+	"description": "A mod that adds drops to vanilla mobs like elytras for ender dragon",
+	"authors": [
+		"ArielM24"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sg-drops/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sg.drops.SGDrops"
+		],
+		"client": [
+			"com.sg.drops.SGDropsClient"
+		]
+	},
+	"mixins": [
+		"sg-drops.mixins.json",
+		{
+			"config": "sg-drops.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
